@@ -1,5 +1,5 @@
 **READ ME!!!!**
-# ToDo-List-Application 0.1
+# ToDo-List-Application 0.11
 A simple ToDo List App
 
 - JFC API, specifically Java Swing toolkit to create a basic gui. (JFrame, JPanel, JLabel, JTextField, JButton, JTextArea)
