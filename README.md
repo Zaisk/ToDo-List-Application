@@ -8,13 +8,13 @@ A simple ToDo List App
 - Basic try and catch block for error handling.
 - Object-oriented java to create readable code.
 
-HOW TO GET PROPERLY WORK APP:
+HOW TO PROPERLY WORK APP:
 1. Use IDE such as Eclipse or IntelliJ IDEA.
 2. Add SQLite JDBC jar to libraries (FOR INTELLIJ: Project-Structure > Libraries > add jar file).
 3. You can run from IDE
 
 IF YOU WANT TO BUILD JAR FOR APP
-1. Goto project-structure > artificats > add Jar > from modules and dependencies > ok
+1. Goto project-structure > artificats > add Jar > from modules and dependencies > select 'ToDoList.java' > click ok
 2. Goto build > build artificats
 3. Open file path with artificats and open jar
 4. DONE
