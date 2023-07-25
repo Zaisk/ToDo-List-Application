@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.*;
 
 public class ToDoListGui {
@@ -13,6 +14,7 @@ public class ToDoListGui {
         JFrame frame = new JFrame("ToDo List");
         frame.setSize(350, 325);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.getContentPane().setBackground(Color.lightGray);
 
         // Create a panel to hold all other components
         JPanel panel = new JPanel();
@@ -30,16 +32,22 @@ public class ToDoListGui {
 
         // Create input field and label
         JLabel label = new JLabel("Enter a task");
-        label.setBounds(10, 10, 80, 25);
+        label.setBounds(10, 10, 90, 25);
+        label.setFont(new Font("Arial", Font.BOLD, 14));
+        label.setForeground(Color.blue);
         panel.add(label);
 
         JTextField textField = new JTextField(20);
-        textField.setBounds(100, 10, 160, 25);
+        textField.setBounds(110, 10, 160, 25);
+        textField.setFont(new Font("Arial", Font.PLAIN, 14));
+        textField.setForeground(Color.black);
         panel.add(textField);
 
         // Create add task button
         JButton addTaskButton = new JButton("Add Task");
         addTaskButton.setBounds(10, 50, 120, 25);
+        addTaskButton.setBackground(Color.green);
+        addTaskButton.setFont(new Font("Arial", Font.BOLD, 12));
         panel.add(addTaskButton);
         addTaskButton.addActionListener(e -> { // GUI component that can trigger an action, when clicking a button.
             // takes a lambda function (e -> { ... }) as its argument, which defines what should happen when the button is clicked
@@ -51,11 +59,15 @@ public class ToDoListGui {
         JTextArea tasksArea = new JTextArea();
         tasksArea.setBounds(10, 90, 315, 150);
         tasksArea.setEditable(false);
+        tasksArea.setFont(new Font("Arial", Font.ITALIC, 14));
+        tasksArea.setForeground(Color.black);
         panel.add(tasksArea);
 
         // Create view tasks button
         JButton viewTasksButton = new JButton("View Tasks");
         viewTasksButton.setBounds(150, 50, 120, 25);
+        viewTasksButton.setBackground(Color.orange);
+        viewTasksButton.setFont(new Font("Arial", Font.BOLD, 12));
         panel.add(viewTasksButton);
         viewTasksButton.addActionListener(e -> {
             tasksArea.setText("");
@@ -75,6 +87,7 @@ public class ToDoListGui {
         // Create a new text field and label for deleting tasks
         JLabel deleteLabel = new JLabel("Delete a task (ID)");
         deleteLabel.setBounds(10, 250, 120, 25);
+
         panel.add(deleteLabel);
 
         JTextField deleteField = new JTextField(20);
@@ -84,6 +97,8 @@ public class ToDoListGui {
         // Create delete task button
         JButton deleteTaskButton = new JButton("Delete Task");
         deleteTaskButton.setBounds(210, 250, 120, 25);
+        deleteTaskButton.setBackground(Color.red);
+        deleteTaskButton.setFont(new Font("Arial", Font.BOLD, 12));
         panel.add(deleteTaskButton);
         // Attach action listener to delete task button
         deleteTaskButton.addActionListener(new ActionListener() {
